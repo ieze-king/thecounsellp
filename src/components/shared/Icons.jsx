@@ -107,6 +107,85 @@ export const InstagramIcon = ({ className }) => (
   </svg>
 );
 
+export const GavelIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 40l6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="18" y="6" width="22" height="10" rx="2" transform="rotate(45 29 11)" stroke="currentColor" strokeWidth="1.5" />
+    <rect x="4" y="28" width="12" height="8" rx="2" transform="rotate(45 10 32)" stroke="currentColor" strokeWidth="1.5" />
+    <line x1="10" y1="44" x2="38" y2="44" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>
+);
+
+export const MonitorIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="4" y="8" width="40" height="26" rx="2" stroke="currentColor" strokeWidth="1.5" />
+    <line x1="4" y1="26" x2="44" y2="26" stroke="currentColor" strokeWidth="1.5" />
+    <polyline points="16,34 12,42 36,42 32,34" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+  </svg>
+);
+
+export const LockIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="22" width="28" height="22" rx="2" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M16 22v-6a8 8 0 0 1 16 0v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <circle cx="24" cy="33" r="2.5" stroke="currentColor" strokeWidth="1.5" />
+    <line x1="24" y1="35.5" x2="24" y2="39" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>
+);
+
+export const DatabaseIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="24" cy="12" rx="16" ry="5" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M8 12v12c0 2.76 7.16 5 16 5s16-2.24 16-5V12" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M8 24v10c0 2.76 7.16 5 16 5s16-2.24 16-5V24" stroke="currentColor" strokeWidth="1.5" />
+  </svg>
+);
+
+export const WifiIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 17a27 27 0 0 1 38 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M11 23a18 18 0 0 1 26 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M17 29a9 9 0 0 1 14 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <circle cx="24" cy="38" r="2.5" fill="currentColor" />
+  </svg>
+);
+
+export const CreditCardIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="4" y="10" width="40" height="28" rx="2" stroke="currentColor" strokeWidth="1.5" />
+    <line x1="4" y1="18" x2="44" y2="18" stroke="currentColor" strokeWidth="1.5" />
+    <line x1="10" y1="28" x2="20" y2="28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="32" y="24" width="8" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" />
+  </svg>
+);
+
+export const ChainIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 30l-3 3a7 7 0 0 0 9.9 9.9l8-8a7 7 0 0 0 0-9.9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M30 18l3-3a7 7 0 0 0-9.9-9.9l-8 8a7 7 0 0 0 0 9.9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="18" y1="30" x2="30" y2="18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>
+);
+
+export const PenIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M34 6l8 8-24 24H10V30L34 6z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    <line x1="28" y1="12" x2="36" y2="20" stroke="currentColor" strokeWidth="1.5" />
+    <line x1="4" y1="44" x2="44" y2="44" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>
+);
+
+export const BuildingIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="6" y="18" width="36" height="26" rx="1" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M16 18V10h16v8" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    <line x1="24" y1="6" x2="24" y2="10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="13" y="26" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" />
+    <rect x="29" y="26" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" />
+    <rect x="19" y="36" width="10" height="8" rx="1" stroke="currentColor" strokeWidth="1.5" />
+  </svg>
+);
+
 export const MenuIcon = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
     <line x1="3" y1="6" x2="21" y2="6" strokeLinecap="round" />

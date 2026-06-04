@@ -21,16 +21,19 @@ export default function About() {
 
             <RevealWrapper delay={200}>
               <p className={styles.text}>
-                The Counsel is a premier full-service legal practice dedicated to providing exceptional
-                counsel to individuals, businesses, and institutions. We bring deep expertise, strategic
-                thinking, and a relentless focus on client outcomes.
+                Established in 2018 and duly registered with the Corporate Affairs Commission (CAC),
+                The Michaels Attorneys is a technology-driven, full-service law firm providing strategic
+                legal, regulatory, compliance, and business advisory services to public and private
+                sector clients across Nigeria.
               </p>
             </RevealWrapper>
 
             <RevealWrapper delay={280}>
               <p className={styles.text}>
-                Our attorneys combine local knowledge with global standards — navigating complex legal
-                landscapes with precision, integrity, and an unwavering dedication to justice.
+                We integrate legal expertise, technology, governance frameworks, risk management systems,
+                and regulatory intelligence to help clients achieve compliance, mitigate risk, protect
+                assets, and drive sustainable growth — founded upon professionalism, integrity,
+                responsiveness, and innovation.
               </p>
             </RevealWrapper>
 

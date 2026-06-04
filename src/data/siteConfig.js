@@ -3,14 +3,14 @@ export const siteConfig = {
   firmAbbr: 'TMA',
   firmAka: 'Ark of God Chambers',
 
-  heroLabel: 'Established · Premier Legal Counsel',
+  heroLabel: 'Established 2018 · Technology-Driven Legal Counsel',
   heroSubtitle:
-    'Sterling legal services grounded in principle, precision, and unwavering commitment to justice. We stand at the intersection of local expertise and global standards.',
+    'A technology-driven law firm at the intersection of law, regulation, governance, and innovation — delivering comprehensive legal services across litigation, cybersecurity, data protection, corporate advisory, and regulatory compliance.',
 
   contact: {
-    address: '15 Broad Street, 4th Floor\nMarina, Lagos Island\nLagos, Nigeria',
-    phones: ['+234 (0) 800 000 0000', '+234 (0) 900 000 0000'],
-    emails: ['info@themichaelsattorneys.com', 'appointments@themichaelsattorneys.com'],
+    address: 'Plot C4, Ipent VI Legislative Villa\nOpposite Prince Ebeano Supermarket\nOff Ring Road 2, Lokogoma/Gaduwa\nAbuja, Nigeria',
+    phones: ['09153685046', '08138740606'],
+    emails: ['themichaelsattorneys11@yahoo.com'],
     hours: 'Monday – Friday: 8:00am – 6:00pm\nSaturday: 9:00am – 1:00pm\nSunday: Closed',
   },
 
@@ -22,21 +22,21 @@ export const siteConfig = {
   },
 
   stats: [
-    { number: '20+', label: 'Years of Practice' },
+    { number: '2018', label: 'Year Founded' },
     { number: '500+', label: 'Cases Handled' },
-    { number: '98%', label: 'Client Satisfaction' },
-    { number: '6', label: 'Practice Areas' },
+    { number: '14+', label: 'Practice Areas' },
+    { number: '9',   label: 'Team Members' },
   ],
 
   aboutPillars: [
-    'Integrity in every engagement',
-    'Global standards, local expertise',
-    'Results-driven representation',
-    'Client confidentiality above all',
+    'Excellence in every professional engagement',
+    'Integrity, transparency, and accountability',
+    'Innovation-driven, technology-enabled solutions',
+    'Client-centric, results-focused representation',
   ],
 
   aboutQuote: {
-    text: 'The law is not merely words on paper — it is the shield of the vulnerable and the sword of the righteous. We wield it with care.',
+    text: 'The law is not merely words on paper — it is the shield of the vulnerable and the sword of the righteous. We wield it with precision, integrity, and unwavering commitment to justice.',
     attribution: 'The Michaels Attorneys — Ark of God Chambers',
   },
 
