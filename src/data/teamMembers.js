@@ -71,4 +71,12 @@ export const teamMembers = [
     bio: 'Coordinates client communications, administrative support, records management, and executive assistance.',
     colorIndex: 1,
   },
+  {
+    id: 10,
+    initials: 'EIK',
+    name: 'Eze Ifeanyi Kingsley',
+    role: 'Head, IT',
+    bio: 'Manages IT systems, network infrastructure, hardware, and technical support across the Firm.',
+    colorIndex: 2,
+  },
 ];
