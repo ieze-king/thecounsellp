@@ -8,20 +8,43 @@
   background: var(--color-navy);
 }
 
-/* ── Layered Background ── */
+/* ── Background Photo Slideshow ── */
+.slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0;
+  transition: opacity 1.8s ease;
+}
+
+.slideActive {
+  opacity: 1;
+}
+
+/* ── Dark overlay that sits above photos ── */
 .bg {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(201, 168, 76, 0.07) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(30, 58, 95, 0.8) 0%, transparent 50%),
-    linear-gradient(135deg, #0a1628 0%, #12213d 45%, #0d1b33 75%, #0a1628 100%);
+    radial-gradient(ellipse at 20% 50%, rgba(201, 168, 76, 0.06) 0%, transparent 60%),
+    linear-gradient(135deg, rgba(10, 22, 40, 0.84) 0%, rgba(12, 21, 40, 0.78) 50%, rgba(10, 22, 40, 0.88) 100%);
 }
 
 /* ── Subtle Grid Pattern ── */
 .pattern {
   position: absolute;
   inset: 0;
+  z-index: 1;
   opacity: 0.03;
   background-image:
     repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(201, 168, 76, 1) 60px, rgba(201, 168, 76, 1) 61px),
@@ -38,6 +61,7 @@
   overflow: hidden;
   opacity: 0.25;
   pointer-events: none;
+  z-index: 1;
 }
 
 .accentLines::before {
@@ -73,6 +97,7 @@
   border-radius: 50%;
   border: 1px solid rgba(201, 168, 76, 0.12);
   pointer-events: none;
+  z-index: 1;
 }
 
 .circle::before {
