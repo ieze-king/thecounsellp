@@ -1,5 +1,5 @@
 import photo1 from './Principal.jpeg';
-import photo2 from './Head of Chambers.jpeg';
+import photo2 from './Head of Chambers_.jpeg';
 import photo3 from './HEAD, ADMIN & ENFORCEMENT.jpeg';
 import photo4 from './FAVOUR NGOZI EGWU, ESQ..jpeg';
 import photo5 from './HEAD, RESEARCH & PUBLICATIONS.jpeg';
