@@ -3,7 +3,7 @@ export const siteConfig = {
   firmAbbr: 'TMA',
   firmAka: 'Ark of God Chambers',
 
-  heroLabel: 'Established 2018 · Technology-Driven Legal Counsel',
+  heroLabel: 'Established 2018 · Technology-Driven Legal Solutions',
   heroSubtitle:
     'A technology-driven law firm at the intersection of law, regulation, governance, and innovation, delivering comprehensive legal services across litigation, cybersecurity, data protection, corporate advisory, and regulatory compliance.',
 
