@@ -217,11 +217,11 @@ export const teamMembers = [
     colorIndex: 2,
     fullBio: [
       'Ezenwanne Yagazie Favour is a highly organized and proactive administrative professional with over three years of experience in secretarial services, office administration, customer relations, and executive support.',
-      'She is currently pursuing a Bachelor of Arts degree in Creative Writing at the Open University of Nigeria.',
+      'She is currently pursuing a Bachelor of Science (B.Sc.) degree in Film Production at the Open University of Nigeria.',
       'She has a proven track record of managing schedules, coordinating meetings, handling correspondence, maintaining records, and ensuring the smooth operation of office activities with professionalism and discretion. Proficient in Microsoft Office, Google Workspace, and other digital productivity tools, Favour is recognized for her strong communication, multitasking, and organizational skills — bringing a blend of administrative expertise, attention to detail, and commitment to excellence in supporting the Firm\'s operations and client service delivery.',
     ],
     education: [
-      'Bachelor of Arts in Creative Writing (in progress) — Open University of Nigeria',
+      'B.Sc. in Film Production (in progress) — Open University of Nigeria',
     ],
     specializations: [
       'Secretarial Services',
