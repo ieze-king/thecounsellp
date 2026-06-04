@@ -44,7 +44,7 @@ export const teamMembers = [
     initials: 'PG',
     name: 'Prosper George Esq.',
     role: 'Head, Litigation',
-    bio: 'Leads litigation strategy, dispute resolution, trial advocacy, and enforcement proceedings before courts and tribunals.',
+    bio: 'Leads litigation strategy, dispute resolution, and trial advocacy before courts and tribunals.',
     colorIndex: 2,
   },
   {
@@ -59,7 +59,7 @@ export const teamMembers = [
     id: 8,
     initials: 'LM',
     name: 'Lois Mfon',
-    role: 'Head, IT & Platform Management',
+    role: 'Head, Media & Platform Management',
     bio: 'Leads technology infrastructure, digital transformation initiatives, cybersecurity support, and platform administration.',
     colorIndex: 4,
   },
