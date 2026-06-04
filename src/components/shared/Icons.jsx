@@ -107,6 +107,13 @@ export const InstagramIcon = ({ className }) => (
   </svg>
 );
 
+export const BookOpenIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M24 10C20 6 10 6 4 10v28c6-4 16-4 20 0 4-4 14-4 20 0V10c-6-4-16-4-20 0z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    <line x1="24" y1="10" x2="24" y2="38" stroke="currentColor" strokeWidth="1.5" />
+  </svg>
+);
+
 export const GavelIcon = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M8 40l6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />

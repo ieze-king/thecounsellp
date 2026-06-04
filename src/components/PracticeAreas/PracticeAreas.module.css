@@ -46,8 +46,15 @@
   background: rgba(201, 168, 76, 0.1);
 }
 
+/* RevealWrapper is the grid item — make it pass height down to the card */
+.grid > * {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ── Individual Card ── */
 .card {
+  flex: 1;
   background: var(--color-navy-mid);
   padding: clamp(1.75rem, 3vw, 2.5rem);
   position: relative;

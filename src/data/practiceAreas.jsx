@@ -1,4 +1,5 @@
 import {
+  BookOpenIcon,
   GavelIcon,
   BriefcaseIcon,
   ShieldCheckIcon,
@@ -127,5 +128,13 @@ export const practiceAreas = [
     title: 'Regulatory & Corporate Services',
     description:
       'Advisory covering CAC, CBN, SEC, PENCOM, NCC, NITDA, FIRS, EFCC-SCAML, AML frameworks, Data Protection Commission, and other regulatory approvals.',
+  },
+  {
+    id: 'civil-criminal',
+    number: '15',
+    Icon: BookOpenIcon,
+    title: 'Other Civil & Criminal Causes',
+    description:
+      'Representation and advisory services across a broad range of civil and criminal matters not otherwise covered by a specific practice area.',
   },
 ];
