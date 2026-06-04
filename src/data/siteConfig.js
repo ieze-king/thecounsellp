@@ -25,7 +25,7 @@ export const siteConfig = {
     { number: '2018', label: 'Year Founded' },
     { number: '500+', label: 'Cases Handled' },
     { number: '14+', label: 'Practice Areas' },
-    { number: '10',  label: 'Team Members' },
+    { number: '9',   label: 'Team Members' },
   ],
 
   aboutPillars: [

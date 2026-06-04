@@ -72,18 +72,6 @@ export const teamMembers = [
     specializations: null,
   },
   {
-    id: 7,
-    slug: 'nkoyo-udo',
-    initials: 'NU',
-    name: 'Nkoyo Udo',
-    role: 'Head, Accounts',
-    bio: 'Responsible for financial management, reporting, budgeting, and financial compliance across the Firm.',
-    colorIndex: 3,
-    fullBio: null,
-    education: null,
-    specializations: null,
-  },
-  {
     id: 8,
     slug: 'eze-kingsley',
     initials: 'EIK',
