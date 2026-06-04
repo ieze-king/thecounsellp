@@ -116,10 +116,10 @@ export const BookOpenIcon = ({ className }) => (
 
 export const GavelIcon = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 40l6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    <rect x="18" y="6" width="22" height="10" rx="2" transform="rotate(45 29 11)" stroke="currentColor" strokeWidth="1.5" />
-    <rect x="4" y="28" width="12" height="8" rx="2" transform="rotate(45 10 32)" stroke="currentColor" strokeWidth="1.5" />
-    <line x1="10" y1="44" x2="38" y2="44" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M6 18l8-8 16 16-8 8L6 18z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    <line x1="10" y1="14" x2="20" y2="24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="22" y1="26" x2="42" y2="42" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+    <line x1="6" y1="44" x2="30" y2="44" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
   </svg>
 );
 
