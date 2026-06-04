@@ -171,7 +171,10 @@ export const teamMembers = [
       'He specializes in courtroom litigation, alternative dispute resolution, and general client advisory services. Known for his strong analytical skills, persuasive advocacy, and ability to achieve favorable outcomes through negotiation and litigation.',
       'He is a results-driven litigator committed to delivering practical and client-focused legal solutions.',
     ],
-    education: null,
+    education: [
+      'LL.B — University of Abuja',
+      'Barrister-at-Law (B.L.) — Nigerian Law School, Abuja',
+    ],
     specializations: [
       'Litigation',
       'Alternative Dispute Resolution (ADR)',
