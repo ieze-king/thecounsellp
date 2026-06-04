@@ -94,7 +94,7 @@ export const teamMembers = [
     initials: 'FE',
     name: 'Favour Ngozi Egwu Esq.',
     role: 'Head, Corporate and Legislative Practices',
-    bio: "Leads the Firm's corporate advisory, regulatory compliance, governance, and commercial transactions practice.",
+    bio: "Leads the Firm's corporate advisory, legislative drafting, regulatory compliance, governance, public policy, and commercial transactions practice.",
     colorIndex: 4,
     fullBio: [
       'Favour Ngozi Egwu, Esq. is a Legal Practitioner called to the Nigerian Bar in 2017. She holds a Postgraduate Diploma (PGD) in Law from the University of South Wales, United Kingdom, and is currently pursuing a Master of Laws (LL.M.) in Legislative Drafting at the National Institute for Legislative and Democratic Studies (NILDS) in affiliation with the University of Benin. She is an alumna of the School of Politics, Policy and Governance (SPPG), where she earned a Certificate in Public Leadership and Policy (CPLP), and is also a Fellow of the Legislative Mentorship Initiative (FLMI). A seasoned legal practitioner, she possesses extensive experience in corporate and commercial law, legislative policy, governance, regulatory compliance, and public affairs.',
