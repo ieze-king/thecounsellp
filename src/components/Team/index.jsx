@@ -9,7 +9,7 @@ export default function Team() {
       <div className={styles.inner}>
         <SectionHeader
           label="Our Team"
-          title="The Minds Behind The Counsel"
+          title="The Minds Behind The Services"
           align="center"
         />
         <div className={styles.grid}>
