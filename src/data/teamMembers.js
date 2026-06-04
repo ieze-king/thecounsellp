@@ -75,8 +75,8 @@ export const teamMembers = [
     id: 10,
     initials: 'EIK',
     name: 'Eze Ifeanyi Kingsley',
-    role: 'Head, IT',
-    bio: 'Manages IT systems, network infrastructure, hardware, and technical support across the Firm.',
+    role: 'Head, Software Development',
+    bio: 'Leads software development, system design, and digital product initiatives across the Firm\'s technology platforms.',
     colorIndex: 2,
   },
 ];
