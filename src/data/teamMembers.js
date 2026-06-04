@@ -27,7 +27,7 @@ export const teamMembers = [
     id: 4,
     initials: 'FE',
     name: 'Favour Egwu Esq.',
-    role: 'Head, Corporate Practice & Compliance',
+    role: 'Head, Corporate and Legislative Practices',
     bio: "Leads the Firm's corporate advisory, regulatory compliance, governance, and commercial transactions practice.",
     colorIndex: 4,
   },
