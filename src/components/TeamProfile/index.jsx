@@ -31,7 +31,9 @@ export default function TeamProfile() {
           <section className={styles.block}>
             <h2 className={styles.blockTitle}>Biography</h2>
             {fullBio ? (
-              <p className={styles.bodyText}>{fullBio}</p>
+              fullBio.map((para, i) => (
+                <p key={i} className={styles.bodyText}>{para}</p>
+              ))
             ) : (
               <p className={styles.bodyText}>{bio}</p>
             )}
