@@ -135,6 +135,14 @@ select.formInput option {
   color: var(--color-white);
 }
 
+.errorMsg {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  color: #e07070;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
 .submitBtn {
   width: 100%;
   padding: 1.1rem;
