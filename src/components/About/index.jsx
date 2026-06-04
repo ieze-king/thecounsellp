@@ -32,7 +32,7 @@ export default function About() {
               <p className={styles.text}>
                 We integrate legal expertise, technology, governance frameworks, risk management systems,
                 and regulatory intelligence to help clients achieve compliance, mitigate risk, protect
-                assets, and drive sustainable growth — founded upon professionalism, integrity,
+                assets, and drive sustainable growth, founded upon professionalism, integrity,
                 responsiveness, and innovation.
               </p>
             </RevealWrapper>
