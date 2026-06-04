@@ -24,7 +24,7 @@ export default function About() {
                 Established in 2018 and duly registered with the Corporate Affairs Commission (CAC),
                 The Michaels Attorneys is a technology-driven, full-service law firm providing strategic
                 legal, regulatory, compliance, and business advisory services to public and private
-                sector clients across Nigeria.
+                sector clients across the Globe.
               </p>
             </RevealWrapper>
 
