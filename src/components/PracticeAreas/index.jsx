@@ -13,7 +13,7 @@ export default function PracticeAreas() {
           <RevealWrapper delay={200}>
             <p className={styles.description}>
               Our firm offers comprehensive legal services across a range of disciplines. Each practice
-              area is led by seasoned attorneys with decades of combined experience and a record of
+              area is led by seasoned attorneys with years of combined experience and a record of
               excellence.
             </p>
           </RevealWrapper>
