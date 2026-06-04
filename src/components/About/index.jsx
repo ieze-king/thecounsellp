@@ -64,6 +64,22 @@ export default function About() {
           </RevealWrapper>
 
         </div>
+
+        {/* ── Vision & Mission ── */}
+        <RevealWrapper delay={100}>
+          <div className={styles.vmRow}>
+            <div className={styles.vmCard}>
+              <span className={styles.vmLabel}>Our Vision</span>
+              <p className={styles.vmText}>{siteConfig.vision}</p>
+            </div>
+            <div className={styles.vmDivider} aria-hidden="true" />
+            <div className={styles.vmCard}>
+              <span className={styles.vmLabel}>Our Mission</span>
+              <p className={styles.vmText}>{siteConfig.mission}</p>
+            </div>
+          </div>
+        </RevealWrapper>
+
       </div>
     </section>
   );

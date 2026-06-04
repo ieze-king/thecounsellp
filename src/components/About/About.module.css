@@ -134,6 +134,58 @@
   opacity: 0.35;
 }
 
+/* ── Vision & Mission ── */
+.vmRow {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0 4rem;
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top: 1px solid var(--color-border-navy);
+  align-items: start;
+}
+
+.vmDivider {
+  background: var(--color-border-gold);
+  height: 100%;
+  min-height: 120px;
+}
+
+.vmCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vmLabel {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.vmLabel::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.vmText {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  color: var(--color-text-mid);
+  line-height: 1.9;
+  font-weight: 300;
+}
+
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .grid {
@@ -148,6 +200,17 @@
   }
 
   .visualAccent {
+    display: none;
+  }
+
+  .vmRow {
+    grid-template-columns: 1fr;
+    gap: 2.5rem 0;
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+  }
+
+  .vmDivider {
     display: none;
   }
 }

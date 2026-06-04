@@ -35,6 +35,10 @@ export const siteConfig = {
     'Client-centric, results-focused representation',
   ],
 
+  vision: 'To be a leading African law firm recognized globally for excellence in legal practice, regulatory compliance, technology law, and innovative legal solutions.',
+
+  mission: 'To provide exceptional legal representation and strategic advisory services through professionalism, innovation, integrity, and a commitment to achieving the best possible outcomes for our clients.',
+
   aboutQuote: {
     text: 'The law is not merely words on paper — it is the shield of the vulnerable and the sword of the righteous. We wield it with precision, integrity, and unwavering commitment to justice.',
     attribution: 'The Michaels Attorneys — Ark of God Chambers',
