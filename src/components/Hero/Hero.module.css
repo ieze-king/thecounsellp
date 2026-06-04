@@ -1,0 +1,236 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--color-navy);
+}
+
+/* ── Layered Background ── */
+.bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(201, 168, 76, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(30, 58, 95, 0.8) 0%, transparent 50%),
+    linear-gradient(135deg, #0a1628 0%, #12213d 45%, #0d1b33 75%, #0a1628 100%);
+}
+
+/* ── Subtle Grid Pattern ── */
+.pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(201, 168, 76, 1) 60px, rgba(201, 168, 76, 1) 61px),
+    repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(201, 168, 76, 1) 60px, rgba(201, 168, 76, 1) 61px);
+}
+
+/* ── Diagonal Gold Accent Lines ── */
+.accentLines {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.accentLines::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 1px;
+  height: 200%;
+  background: linear-gradient(to bottom, transparent, var(--color-gold), transparent);
+  transform: rotate(20deg);
+}
+
+.accentLines::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: 12%;
+  width: 1px;
+  height: 200%;
+  background: linear-gradient(to bottom, transparent, var(--color-gold), transparent);
+  transform: rotate(20deg);
+}
+
+/* ── Decorative Concentric Circles ── */
+.circle {
+  position: absolute;
+  right: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(440px, 40vw);
+  height: min(440px, 40vw);
+  border-radius: 50%;
+  border: 1px solid rgba(201, 168, 76, 0.12);
+  pointer-events: none;
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  inset: 22px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 168, 76, 0.08);
+}
+
+.circle::after {
+  content: '';
+  position: absolute;
+  inset: 66px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 168, 76, 0.05);
+}
+
+/* ── Content ── */
+.content {
+  position: relative;
+  z-index: 2;
+  padding: calc(var(--nav-height) + 2rem) var(--section-x) 5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+  animation: fadeUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.label::before {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 1px;
+  background: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: clamp(2.8rem, 7vw, 6rem);
+  font-weight: 700;
+  color: var(--color-white);
+  max-width: 700px;
+  line-height: 1.08;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.titleEm {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.62);
+  max-width: 520px;
+  line-height: 1.9;
+  margin-bottom: 2.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* ── Scroll Indicator ── */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.scrollText {
+  font-family: var(--font-ui);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.scrollLine {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(201, 168, 76, 0.7), transparent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); transform-origin: top; }
+  50% { opacity: 1; transform: scaleY(0.6); transform-origin: top; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .circle {
+    display: none;
+  }
+
+  .accentLines {
+    width: 60%;
+    opacity: 0.12;
+  }
+
+  .title {
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding-bottom: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,83 @@
+.header {
+  margin-bottom: 3.5rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+/* ── Label ── */
+.label {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.light {
+  color: var(--color-gold-light);
+}
+
+/* ── Title ── */
+.title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: var(--color-text-dark);
+  line-height: 1.15;
+  max-width: 580px;
+}
+
+.center .title,
+.right .title {
+  max-width: 100%;
+}
+
+.titleLight {
+  color: var(--color-white);
+}
+
+/* ── Divider ── */
+.divider {
+  width: 52px;
+  height: 2px;
+  background: var(--color-gold);
+  margin-top: 1.5rem;
+}
+
+.center .divider {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right .divider {
+  margin-left: auto;
+}
+
+/* ── Description ── */
+.description {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--color-text-mid);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-top: 1.25rem;
+  max-width: 560px;
+}
+
+.center .description {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.descriptionLight {
+  color: rgba(255, 255, 255, 0.6);
+}
