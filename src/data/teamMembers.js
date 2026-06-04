@@ -204,7 +204,9 @@ export const teamMembers = [
     bio: 'Leads technology infrastructure, digital transformation initiatives, cybersecurity support, and platform administration.',
     colorIndex: 1,
     fullBio: null,
-    education: null,
+    education: [
+      'B.Sc. Hospitality & Tourism Management — Cross River University of Technology',
+    ],
     specializations: null,
   },
   {
