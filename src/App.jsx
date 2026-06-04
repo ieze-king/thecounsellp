@@ -8,6 +8,7 @@ import PracticeAreas from './components/PracticeAreas';
 import Team from './components/Team';
 import Contact from './components/Contact';
 import TeamProfile from './components/TeamProfile';
+import NotFound from './components/NotFound';
 
 function HomeContent() {
   const { hash } = useLocation();
@@ -38,6 +39,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomeContent />} />
         <Route path="/team/:slug" element={<TeamProfile />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
   );

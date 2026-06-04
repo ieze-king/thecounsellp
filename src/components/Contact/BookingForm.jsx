@@ -49,27 +49,31 @@ export default function BookingForm() {
     setStatus('loading');
     setErrorMsg('');
 
+    // 1. Save to Firestore — critical path
     try {
-      // 1. Save to Firestore — permanent record
       await addDoc(collection(db, 'bookings'), {
         ...form,
         submittedAt: serverTimestamp(),
       });
-
-      // 2. Send email notification via Web3Forms
-      await notifyViaWeb3Forms(form);
-
-      setStatus('success');
-      setTimeout(() => {
-        setStatus('idle');
-        setForm(initialForm);
-      }, 4000);
-
     } catch (err) {
-      console.error('Submission error:', err);
+      console.error('Firestore error:', err);
       setErrorMsg('Something went wrong. Please try again or call us directly.');
       setStatus('error');
+      return;
     }
+
+    // 2. Send email notification — non-critical (booking already saved)
+    try {
+      await notifyViaWeb3Forms(form);
+    } catch (err) {
+      console.error('Email notification failed (booking was saved):', err);
+    }
+
+    setStatus('success');
+    setTimeout(() => {
+      setStatus('idle');
+      setForm(initialForm);
+    }, 4000);
   };
 
   const isLoading = status === 'loading';
