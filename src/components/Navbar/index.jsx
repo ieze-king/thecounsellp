@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Button from '../shared/Button';
 import { MenuIcon, CloseIcon } from '../shared/Icons';
 import { siteConfig } from '../../data/siteConfig';
@@ -12,8 +13,8 @@ const navLinks = [
   { label: 'Contact', href: '#contact' },
 ];
 
-function scrollTo(href) {
-  const target = document.querySelector(href);
+function smoothScrollTo(hash) {
+  const target = document.querySelector(hash);
   if (!target) return;
   const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
   window.scrollTo({ top, behavior: 'smooth' });
@@ -22,6 +23,8 @@ function scrollTo(href) {
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
@@ -32,14 +35,28 @@ export default function Navbar() {
   const handleNavClick = useCallback((e, href) => {
     e.preventDefault();
     setIsMenuOpen(false);
-    scrollTo(href);
-  }, []);
+    if (location.pathname === '/') {
+      smoothScrollTo(href);
+    } else {
+      navigate(`/${href}`);
+    }
+  }, [location.pathname, navigate]);
+
+  const handleLogoClick = useCallback((e) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+  }, [location.pathname, navigate]);
 
   return (
     <>
       <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`} role="navigation" aria-label="Main navigation">
         <div className={styles.inner}>
-          <a href="#home" className={styles.logo} onClick={(e) => handleNavClick(e, '#home')}>
+          <a href="/" className={styles.logo} onClick={handleLogoClick}>
             <img src={logo} alt={`${siteConfig.firmName} logo`} className={styles.logoImg} />
             <div className={styles.logoText}>
               <div className={styles.logoTop}>
