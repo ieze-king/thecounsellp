@@ -8,7 +8,7 @@ import styles from './Navbar.module.css';
 const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Practice Areas', href: '#practice' },
-  { label: 'Our People', href: '#team' },
+  { label: 'Our Team', href: '#team' },
   { label: 'Contact', href: '#contact' },
 ];
 
