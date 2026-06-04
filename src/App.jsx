@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Layout from './components/shared/Layout';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
@@ -23,6 +24,10 @@ function HomeContent() {
 
   return (
     <>
+      <Helmet>
+        <title>The Michaels Attorneys (TMA) — Ark of God Chambers | Law Firm in Abuja, Nigeria</title>
+        <meta name="description" content="The Michaels Attorneys (TMA) — a technology-driven law firm in Abuja, Nigeria. Specialising in litigation, cybersecurity law, data protection, ICT law, corporate advisory, and regulatory compliance since 2018." />
+      </Helmet>
       <Hero />
       <Stats />
       <About />

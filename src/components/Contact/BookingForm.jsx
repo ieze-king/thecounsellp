@@ -14,6 +14,14 @@ const initialForm = {
   message: '',
 };
 
+function validate(form) {
+  if (!form.firstName.trim()) return 'First name is required.';
+  if (!form.lastName.trim()) return 'Last name is required.';
+  if (!form.email.trim()) return 'Email address is required.';
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) return 'Please enter a valid email address.';
+  return null;
+}
+
 async function notifyViaWeb3Forms(formData) {
   const response = await fetch('https://api.web3forms.com/submit', {
     method: 'POST',
@@ -46,6 +54,12 @@ export default function BookingForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const validationError = validate(form);
+    if (validationError) {
+      setErrorMsg(validationError);
+      setStatus('error');
+      return;
+    }
     setStatus('loading');
     setErrorMsg('');
 

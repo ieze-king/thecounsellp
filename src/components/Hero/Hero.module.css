@@ -259,3 +259,18 @@
     font-size: 1rem;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .slide {
+    transition: none;
+  }
+
+  .content {
+    animation: none;
+  }
+
+  .scrollLine {
+    animation: none;
+    opacity: 0.6;
+  }
+}

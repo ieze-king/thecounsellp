@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import Button from '../shared/Button';
 import { MenuIcon, CloseIcon } from '../shared/Icons';
 import { siteConfig } from '../../data/siteConfig';
+import { smoothScrollTo } from '../../utils/scrollTo';
 import logo from '../../assets/logo.png';
 import styles from './Navbar.module.css';
 
@@ -12,13 +13,6 @@ const navLinks = [
   { label: 'Our Team', href: '#team' },
   { label: 'Contact', href: '#contact' },
 ];
-
-function smoothScrollTo(hash) {
-  const target = document.querySelector(hash);
-  if (!target) return;
-  const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
-  window.scrollTo({ top, behavior: 'smooth' });
-}
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);

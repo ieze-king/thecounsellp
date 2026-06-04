@@ -15,7 +15,7 @@ export default function TeamAvatar({ id, initials, name, colorIndex, size = 'md'
   return (
     <div className={`${styles.avatar} ${styles[size]}`}>
       {photo ? (
-        <img src={photo} alt={name} className={styles.photo} />
+        <img src={photo} alt={name} className={styles.photo} loading="lazy" />
       ) : (
         <div className={styles.placeholder} style={{ background: gradient }} aria-label={`${name} initials`}>
           <span aria-hidden="true">{initials}</span>

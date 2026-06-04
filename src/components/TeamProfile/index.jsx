@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { teamMembers } from '../../data/teamMembers';
 import TeamAvatar from '../shared/TeamAvatar';
 import styles from './TeamProfile.module.css';
@@ -13,6 +14,11 @@ export default function TeamProfile() {
 
   return (
     <article className={styles.page}>
+      <Helmet>
+        <title>{name} — The Michaels Attorneys</title>
+        <meta name="description" content={`${role} at The Michaels Attorneys (TMA) — Ark of God Chambers. ${bio}`} />
+      </Helmet>
+
       {/* ── Hero Banner ── */}
       <div className={styles.hero}>
         <div className={styles.heroInner}>

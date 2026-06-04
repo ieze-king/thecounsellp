@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Button from '../shared/Button';
 import { siteConfig } from '../../data/siteConfig';
+import { smoothScrollTo } from '../../utils/scrollTo';
 import Slider0 from '../../assets/Slider0.jpeg';
 import Slider1 from '../../assets/Slider1.jpeg';
 import Slider2 from '../../assets/Slider2.jpeg';
@@ -11,19 +12,14 @@ import Slider6 from '../../assets/Slider6.jpeg';
 import styles from './Hero.module.css';
 
 const slides = [Slider0, Slider1, Slider2, Slider3, Slider4, Slider5, Slider6];
-
-function scrollTo(href) {
-  const target = document.querySelector(href);
-  if (!target) return;
-  const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
-  window.scrollTo({ top, behavior: 'smooth' });
-}
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
   const intervalRef = useRef(null);
 
   useEffect(() => {
+    if (prefersReducedMotion) return;
     intervalRef.current = setInterval(() => {
       setCurrent((c) => (c + 1) % slides.length);
     }, 6000);
@@ -60,10 +56,10 @@ export default function Hero() {
         <p className={styles.subtitle}>{siteConfig.heroSubtitle}</p>
 
         <div className={styles.actions}>
-          <Button href="#contact" variant="gold" onClick={(e) => { e.preventDefault(); scrollTo('#contact'); }}>
+          <Button href="#contact" variant="gold" onClick={(e) => { e.preventDefault(); smoothScrollTo('#contact'); }}>
             Book a Consultation
           </Button>
-          <Button href="#practice" variant="outline" onClick={(e) => { e.preventDefault(); scrollTo('#practice'); }}>
+          <Button href="#practice" variant="outline" onClick={(e) => { e.preventDefault(); smoothScrollTo('#practice'); }}>
             Our Practice Areas
           </Button>
         </div>

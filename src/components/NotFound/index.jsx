@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import styles from './NotFound.module.css';
 
 export default function NotFound() {
   return (
     <div className={styles.wrapper}>
+      <Helmet>
+        <title>Page Not Found — The Michaels Attorneys</title>
+      </Helmet>
       <div className={styles.inner}>
         <span className={styles.code}>404</span>
         <h1 className={styles.title}>Page Not Found</h1>
