@@ -48,9 +48,9 @@ export default function Hero() {
         <span className={styles.label}>{siteConfig.heroLabel}</span>
 
         <h1 className={styles.title}>
-          Elevating Legal
+          Redefining
           <br />
-          <em className={styles.titleEm}>Excellence</em> Globally
+          <em className={styles.titleEm}>Excellence</em> in Law Practice
         </h1>
 
         <p className={styles.subtitle}>{siteConfig.heroSubtitle}</p>
