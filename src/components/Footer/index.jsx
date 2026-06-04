@@ -1,6 +1,7 @@
 import { LinkedInIcon, TwitterIcon, FacebookIcon, InstagramIcon } from '../shared/Icons';
 import { siteConfig } from '../../data/siteConfig';
 import { practiceAreas } from '../../data/practiceAreas';
+import logo from '../../assets/logo.png';
 import styles from './Footer.module.css';
 
 const quickLinks = [
@@ -26,13 +27,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className={styles.brand}>
-            <div className={styles.brandTop}>
-              <span className={styles.brandAbbr}>{siteConfig.firmAbbr}</span>
-              <div className={styles.brandNames}>
-                <div className={styles.brandName}>{siteConfig.firmName}</div>
-                <span className={styles.brandAka}>{siteConfig.firmAka}</span>
-              </div>
-            </div>
+            <img src={logo} alt={`${siteConfig.firmName} logo`} className={styles.brandLogo} />
             <p className={styles.brandText}>
               Delivering sterling legal services to individuals, businesses, and institutions.
               Grounded in integrity. Driven by excellence.

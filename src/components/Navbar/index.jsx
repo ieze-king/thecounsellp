@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import Button from '../shared/Button';
 import { MenuIcon, CloseIcon } from '../shared/Icons';
 import { siteConfig } from '../../data/siteConfig';
+import logo from '../../assets/logo.png';
 import styles from './Navbar.module.css';
 
 const navLinks = [
@@ -39,12 +40,15 @@ export default function Navbar() {
       <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`} role="navigation" aria-label="Main navigation">
         <div className={styles.inner}>
           <a href="#home" className={styles.logo} onClick={(e) => handleNavClick(e, '#home')}>
-            <div className={styles.logoTop}>
-              <span className={styles.logoAbbr}>{siteConfig.firmAbbr}</span>
-              <span className={styles.logoDivider} aria-hidden="true" />
-              <span className={styles.logoName}>{siteConfig.firmName}</span>
+            <img src={logo} alt={`${siteConfig.firmName} logo`} className={styles.logoImg} />
+            <div className={styles.logoText}>
+              <div className={styles.logoTop}>
+                <span className={styles.logoAbbr}>{siteConfig.firmAbbr}</span>
+                <span className={styles.logoDivider} aria-hidden="true" />
+                <span className={styles.logoName}>{siteConfig.firmName}</span>
+              </div>
+              <span className={styles.logoTag}>{siteConfig.firmAka}</span>
             </div>
-            <span className={styles.logoTag}>{siteConfig.firmAka}</span>
           </a>
 
           <ul className={styles.links} role="list">
