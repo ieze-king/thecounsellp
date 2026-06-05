@@ -1,12 +1,29 @@
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase';
 import SectionHeader from '../shared/SectionHeader';
 import PublicationCard from './PublicationCard';
-import { publications } from '../../data/publications';
+import { publications as staticPublications } from '../../data/publications';
 import styles from './Publications.module.css';
 
-const sorted = [...publications].sort((a, b) => new Date(b.date) - new Date(a.date));
+const staticSorted = [...staticPublications].sort((a, b) => new Date(b.date) - new Date(a.date));
 
 export default function PublicationsList() {
+  const [articles, setArticles] = useState(staticSorted);
+
+  useEffect(() => {
+    getDocs(query(collection(db, 'articles'), where('status', '==', 'published')))
+      .then((snap) => {
+        if (snap.empty) return;
+        const live = snap.docs
+          .map((d) => ({ id: d.id, ...d.data() }))
+          .sort((a, b) => new Date(b.date) - new Date(a.date));
+        setArticles(live);
+      })
+      .catch(() => {});
+  }, []);
+
   return (
     <div className={styles.pageSection}>
       <Helmet>
@@ -19,8 +36,8 @@ export default function PublicationsList() {
           <SectionHeader label="Insights & Research" title="Publications & Legal Updates" />
         </div>
         <div className={styles.listGrid}>
-          {sorted.map((pub, index) => (
-            <PublicationCard key={pub.id} {...pub} delay={index * 80} />
+          {articles.map((pub, index) => (
+            <PublicationCard key={pub.id ?? pub.slug} {...pub} delay={index * 80} />
           ))}
         </div>
       </div>

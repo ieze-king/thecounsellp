@@ -9,11 +9,16 @@ import PracticeAreas from './components/PracticeAreas';
 import Team from './components/Team';
 import Contact from './components/Contact';
 import Publications from './components/Publications';
+import AuthProvider from './context/AuthContext';
+import ProtectedRoute from './components/shared/ProtectedRoute';
 
 const TeamProfile       = lazy(() => import('./components/TeamProfile'));
 const PublicationsList  = lazy(() => import('./components/Publications/PublicationsList'));
 const PublicationDetail = lazy(() => import('./components/PublicationDetail'));
 const NotFound          = lazy(() => import('./components/NotFound'));
+const AdminLogin        = lazy(() => import('./components/Admin/Login'));
+const AdminDashboard    = lazy(() => import('./components/Admin/Dashboard'));
+const AdminArticleForm  = lazy(() => import('./components/Admin/ArticleForm'));
 
 function HomeContent() {
   const { hash } = useLocation();
@@ -43,7 +48,7 @@ function HomeContent() {
   );
 }
 
-export default function App() {
+function MainSite() {
   return (
     <Layout>
       <Suspense fallback={null}>
@@ -56,5 +61,31 @@ export default function App() {
         </Routes>
       </Suspense>
     </Layout>
+  );
+}
+
+function AdminSite() {
+  return (
+    <Suspense fallback={null}>
+      <Routes>
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/new" element={<ProtectedRoute><AdminArticleForm /></ProtectedRoute>} />
+        <Route path="/admin/edit/:slug" element={<ProtectedRoute><AdminArticleForm /></ProtectedRoute>} />
+        <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+      </Routes>
+    </Suspense>
+  );
+}
+
+function AppRouter() {
+  const { pathname } = useLocation();
+  return pathname.startsWith('/admin') ? <AdminSite /> : <MainSite />;
+}
+
+export default function App() {
+  return (
+    <AuthProvider>
+      <AppRouter />
+    </AuthProvider>
   );
 }

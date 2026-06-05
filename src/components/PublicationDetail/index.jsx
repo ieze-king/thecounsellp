@@ -1,6 +1,9 @@
+import { useState, useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { publications } from '../../data/publications';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../firebase';
+import { publications as staticPublications } from '../../data/publications';
 import styles from './PublicationDetail.module.css';
 
 function formatDate(iso) {
@@ -9,9 +12,26 @@ function formatDate(iso) {
 
 export default function PublicationDetail() {
   const { slug } = useParams();
-  const article = publications.find((p) => p.slug === slug);
+  const staticMatch = staticPublications.find((p) => p.slug === slug);
+  const [article, setArticle] = useState(staticMatch ?? null);
+  const [loading, setLoading] = useState(!staticMatch);
+  const [notFound, setNotFound] = useState(false);
 
-  if (!article) return <Navigate to="/publications" replace />;
+  useEffect(() => {
+    getDoc(doc(db, 'articles', slug))
+      .then((snap) => {
+        if (snap.exists() && snap.data().status === 'published') {
+          setArticle({ id: snap.id, ...snap.data() });
+        } else if (!staticMatch) {
+          setNotFound(true);
+        }
+      })
+      .catch(() => { if (!staticMatch) setNotFound(true); })
+      .finally(() => setLoading(false));
+  }, [slug, staticMatch]);
+
+  if (loading) return null;
+  if (notFound || !article) return <Navigate to="/publications" replace />;
 
   const { title, date, author, authorRole, category, body, tags } = article;
 
