@@ -20,7 +20,7 @@ export default function Publications() {
       .then((snap) => {
         if (snap.empty) return;
         const live = snap.docs
-          .map((d) => ({ id: d.id, ...d.data() }))
+          .map((d) => ({ id: d.id, slug: d.id, ...d.data() }))
           .sort((a, b) => new Date(b.date) - new Date(a.date))
           .slice(0, 3);
         setArticles(live);

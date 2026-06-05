@@ -105,6 +105,7 @@ export default function ArticleForm() {
       const slug = form.slug.trim();
 
       await setDoc(doc(db, 'articles', slug), {
+        slug,
         title:      form.title.trim(),
         author:     form.author.trim(),
         authorRole: form.authorRole.trim(),

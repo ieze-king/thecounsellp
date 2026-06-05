@@ -21,7 +21,7 @@ export default function PublicationDetail() {
     getDoc(doc(db, 'articles', slug))
       .then((snap) => {
         if (snap.exists() && snap.data().status === 'published') {
-          setArticle({ id: snap.id, ...snap.data() });
+          setArticle({ id: snap.id, slug: snap.id, ...snap.data() });
         } else if (!staticMatch) {
           setNotFound(true);
         }
