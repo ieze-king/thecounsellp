@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate, Link, useLocation } from 'react-router-dom';
 import { doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { signOut } from 'firebase/auth';
 import { db, auth } from '../../firebase';
@@ -145,7 +145,7 @@ export default function ArticleForm() {
         </div>
         <div className={styles.topBarActions}>
           <span className={styles.topBarUser}>{user?.email}</span>
-          <button className={styles.logoutBtn} onClick={() => signOut(auth)}>Sign Out</button>
+          <button className={styles.logoutBtn} onClick={() => signOut(auth).then(() => navigate('/'))}>Sign Out</button>
         </div>
       </header>
 

@@ -4,6 +4,7 @@ import { collection, getDocs, doc, deleteDoc, updateDoc, orderBy, query } from '
 import { signOut } from 'firebase/auth';
 import { db, auth } from '../../firebase';
 import { useAuth } from '../../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import styles from './Admin.module.css';
 
 function formatDate(iso) {
@@ -13,6 +14,7 @@ function formatDate(iso) {
 
 export default function Dashboard() {
   const { user } = useAuth();
+  const navigate  = useNavigate();
   const [articles, setArticles] = useState([]);
   const [loading, setLoading]   = useState(true);
 
@@ -52,7 +54,7 @@ export default function Dashboard() {
         </div>
         <div className={styles.topBarActions}>
           <span className={styles.topBarUser}>{user?.email}</span>
-          <button className={styles.logoutBtn} onClick={() => signOut(auth)}>Sign Out</button>
+          <button className={styles.logoutBtn} onClick={() => signOut(auth).then(() => navigate('/'))}>Sign Out</button>
         </div>
       </header>
 

@@ -76,6 +76,27 @@ export default function Login() {
             {loading ? 'Signing in…' : 'Sign In'}
           </button>
         </form>
+
+        <p style={{ textAlign: 'center', marginTop: '1.75rem' }}>
+          <a
+            href="/"
+            style={{
+              fontFamily: 'var(--font-ui)',
+              fontSize: '0.68rem',
+              fontWeight: 600,
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              color: 'var(--color-text-mid)',
+              textDecoration: 'none',
+              borderBottom: '1px solid transparent',
+              transition: 'color 0.2s, border-color 0.2s',
+            }}
+            onMouseEnter={(e) => { e.target.style.color = 'var(--color-navy)'; e.target.style.borderColor = 'var(--color-navy)'; }}
+            onMouseLeave={(e) => { e.target.style.color = 'var(--color-text-mid)'; e.target.style.borderColor = 'transparent'; }}
+          >
+            ← Back to Website
+          </a>
+        </p>
       </div>
     </div>
   );
