@@ -152,6 +152,32 @@ select.formInput option {
   justify-content: center;
 }
 
+/* ── Map ── */
+.mapWrapper {
+  margin-top: 5rem;
+  border-top: 1px solid var(--color-border-gold);
+  padding-top: 3rem;
+}
+
+.mapLabel {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 1.25rem;
+}
+
+.mapFrame {
+  width: 100%;
+  height: 400px;
+  border: 1px solid var(--color-border-gold);
+  display: block;
+  filter: grayscale(20%) contrast(95%);
+}
+
 /* ── Responsive ── */
 @media (max-width: 1100px) {
   .grid {
@@ -169,5 +195,14 @@ select.formInput option {
 @media (max-width: 480px) {
   .formRow {
     grid-template-columns: 1fr;
+  }
+
+  .mapFrame {
+    height: 280px;
+  }
+
+  .mapWrapper {
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
   }
 }

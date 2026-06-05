@@ -17,6 +17,20 @@ export default function Contact() {
             <BookingForm />
           </RevealWrapper>
         </div>
+
+        <RevealWrapper delay={100}>
+          <div className={styles.mapWrapper}>
+            <span className={styles.mapLabel}>Find Us</span>
+            <iframe
+              className={styles.mapFrame}
+              title="The Michaels Attorneys office location"
+              src="https://maps.google.com/maps?q=Ipent+VI+Legislative+Villa+Lokogoma+Gaduwa+Abuja+Nigeria&output=embed&z=16"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </RevealWrapper>
       </div>
     </section>
   );
