@@ -74,56 +74,89 @@
   flex-shrink: 0;
 }
 
-/* ── Visual Panel ── */
+/* ── Visual Wrapper ── */
 .visualWrapper {
   position: relative;
 }
 
-.visual {
-  background: var(--color-navy);
-  padding: clamp(2rem, 4vw, 3.5rem);
+/* ── Photo Carousel ── */
+.carousel {
   position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
+  background: var(--color-navy);
 }
 
-.visual::before {
-  content: '"';
+.carouselSlide {
   position: absolute;
-  top: 0.5rem;
-  left: 1.5rem;
-  font-family: var(--font-display);
-  font-size: 8rem;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.carouselSlideActive {
+  opacity: 1;
+}
+
+/* Prev / Next buttons */
+.carouselBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 38px;
+  height: 38px;
+  background: rgba(10, 22, 40, 0.65);
+  border: 1px solid var(--color-border-gold);
   color: var(--color-gold);
-  opacity: 0.12;
-  line-height: 1;
-  pointer-events: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease;
 }
 
-.quoteText {
-  font-family: var(--font-display);
-  font-size: clamp(1.15rem, 2vw, 1.55rem);
-  font-style: italic;
-  color: var(--color-white);
-  line-height: 1.7;
-  position: relative;
-  z-index: 1;
-  padding-left: 0.5rem;
+.carouselBtn:hover {
+  background: rgba(10, 22, 40, 0.9);
 }
 
-.quoteAttr {
-  display: block;
-  font-family: var(--font-ui);
-  font-size: 0.6rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  margin-top: 1.5rem;
-  position: relative;
-  z-index: 1;
-  padding-left: 0.5rem;
+.carouselBtnPrev { left: 0.75rem; }
+.carouselBtnNext { right: 0.75rem; }
+
+/* Dot indicators */
+.carouselDots {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 3;
 }
 
+.carouselDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+  padding: 0;
+}
+
+.carouselDotActive {
+  background: var(--color-gold);
+  transform: scale(1.35);
+}
+
+/* Decorative gold accent */
 .visualAccent {
   position: absolute;
   bottom: -1.5rem;
@@ -132,6 +165,13 @@
   height: 90px;
   border: 1px solid var(--color-gold);
   opacity: 0.35;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carouselSlide {
+    transition: none;
+  }
 }
 
 /* ── Vision & Mission ── */

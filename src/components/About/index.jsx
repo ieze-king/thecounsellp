@@ -1,5 +1,6 @@
 import Button from '../shared/Button';
 import RevealWrapper from '../shared/RevealWrapper';
+import AboutCarousel from './AboutCarousel';
 import { siteConfig } from '../../data/siteConfig';
 import styles from './About.module.css';
 
@@ -54,13 +55,9 @@ export default function About() {
             </RevealWrapper>
           </div>
 
-          {/* ── Right: Quote Panel ── */}
+          {/* ── Right: Photo Carousel ── */}
           <RevealWrapper delay={200} className={styles.visualWrapper}>
-            <div className={styles.visual}>
-              <div className={styles.quoteText}>{siteConfig.aboutQuote.text}</div>
-              <span className={styles.quoteAttr}>— {siteConfig.aboutQuote.attribution}</span>
-            </div>
-            <div className={styles.visualAccent} aria-hidden="true" />
+            <AboutCarousel />
           </RevealWrapper>
 
         </div>
