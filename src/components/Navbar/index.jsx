@@ -79,9 +79,12 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <Button href="#contact" variant="gold" className={styles.cta} onClick={(e) => handleNavClick(e, '#contact')}>
-            Book Appointment
-          </Button>
+          <div className={styles.navActions}>
+            <Link to="/admin/login" className={styles.staffLogin}>Staff Login</Link>
+            <Button href="#contact" variant="gold" className={styles.cta} onClick={(e) => handleNavClick(e, '#contact')}>
+              Book Appointment
+            </Button>
+          </div>
 
           <button
             className={styles.hamburger}
@@ -114,6 +117,9 @@ export default function Navbar() {
         <Button href="#contact" variant="gold" onClick={(e) => handleNavClick(e, '#contact')}>
           Book Appointment
         </Button>
+        <Link to="/admin/login" className={styles.mobileLink} onClick={() => setIsMenuOpen(false)}>
+          Staff Login
+        </Link>
       </div>
     </>
   );
