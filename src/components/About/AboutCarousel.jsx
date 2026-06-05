@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import GroupPicture0 from '../../assets/GroupPicture0.jpeg';
 import GroupPicture1 from '../../assets/GroupPicture1.jpeg';
 import GroupPicture2 from '../../assets/GroupPicture2.jpeg';
+import { siteConfig } from '../../data/siteConfig';
 import styles from './About.module.css';
 
 const slides = [
@@ -84,6 +85,12 @@ export default function AboutCarousel() {
             aria-label={`Go to photo ${i + 1}`}
           />
         ))}
+      </div>
+
+      {/* Quote overlay */}
+      <div className={styles.carouselOverlay} aria-hidden="true">
+        <p className={styles.carouselQuote}>{siteConfig.aboutQuote.text}</p>
+        <span className={styles.carouselAttr}>— {siteConfig.aboutQuote.attribution}</span>
       </div>
 
       {/* Decorative accent */}

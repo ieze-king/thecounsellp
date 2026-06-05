@@ -129,10 +129,43 @@
 .carouselBtnPrev { left: 0.75rem; }
 .carouselBtnNext { right: 0.75rem; }
 
+/* Quote overlay */
+.carouselOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 4rem 1.75rem 1.75rem;
+  background: linear-gradient(to top, rgba(5, 12, 24, 0.97) 0%, rgba(5, 12, 24, 0.75) 55%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carouselQuote {
+  font-family: var(--font-display);
+  font-size: clamp(0.85rem, 1.35vw, 1rem);
+  font-style: italic;
+  color: #ffffff;
+  line-height: 1.75;
+  margin: 0 0 0.6rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.carouselAttr {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
 /* Dot indicators */
 .carouselDots {
   position: absolute;
-  bottom: 0.85rem;
+  top: 0.85rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
