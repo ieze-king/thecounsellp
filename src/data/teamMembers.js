@@ -204,7 +204,7 @@ export const teamMembers = [
     initials: 'LM',
     name: 'Lois Mfon',
     role: 'Head, Media & Platform Management',
-    bio: 'Leads technology infrastructure, digital transformation initiatives, cybersecurity support, and platform administration.',
+    bio: 'Manages the Firm\'s media and digital platforms, driving strategic communications and enhancing brand visibility.',
     colorIndex: 1,
     fullBio: null,
     education: [
