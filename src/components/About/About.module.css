@@ -83,7 +83,7 @@
 .carousel {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--color-navy);
 }
@@ -270,6 +270,10 @@
   .grid {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+
+  .carousel {
+    aspect-ratio: 3 / 4;
   }
 
   .visualAccent {
