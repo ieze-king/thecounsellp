@@ -4,11 +4,6 @@ import {
   BriefcaseIcon,
   ShieldCheckIcon,
   MonitorIcon,
-  LockIcon,
-  DatabaseIcon,
-  WifiIcon,
-  CreditCardIcon,
-  ChainIcon,
   UsersIcon,
   DocumentTextIcon,
   ScalesIcon,
@@ -47,51 +42,11 @@ export const practiceAreas = [
     Icon: MonitorIcon,
     title: 'ICT Law',
     description:
-      'Advising technology companies, digital platforms, telecommunications providers, and emerging technology enterprises on all ICT legal matters.',
-  },
-  {
-    id: 'cybersecurity',
-    number: '05',
-    Icon: LockIcon,
-    title: 'Cybersecurity & Cybercrimes Law',
-    description:
-      'Legal advisory services covering cybersecurity compliance, cyber incident response, cybercrime investigations, and digital risk management.',
-  },
-  {
-    id: 'data-protection',
-    number: '06',
-    Icon: DatabaseIcon,
-    title: 'Data Protection & Privacy',
-    description:
-      'Compliance implementation, audits, privacy policies, data processing agreements, and regulatory advisory under applicable data protection frameworks.',
-  },
-  {
-    id: 'telecoms',
-    number: '07',
-    Icon: WifiIcon,
-    title: 'Telecommunications Law',
-    description:
-      'Regulatory advisory services for telecommunications operators, service providers, infrastructure companies, and digital communication platforms.',
-  },
-  {
-    id: 'ecommerce',
-    number: '08',
-    Icon: CreditCardIcon,
-    title: 'E-Commerce & Digital Transactions',
-    description:
-      'Legal support for online businesses, electronic contracts, fintech platforms, and digital marketplace operators.',
-  },
-  {
-    id: 'digital-assets',
-    number: '09',
-    Icon: ChainIcon,
-    title: 'Digital & Virtual Assets Regulation',
-    description:
-      'Advisory services relating to digital assets, blockchain technologies, virtual asset service providers, and emerging financial technologies.',
+      'Legal advisory and compliance services in Cybersecurity & Cybercrimes Law, Data Protection & Privacy, Telecommunications Law, E-commerce & Digital Transactions, and Digital and Virtual Assets.',
   },
   {
     id: 'employment',
-    number: '10',
+    number: '05',
     Icon: UsersIcon,
     title: 'Employment & Labour Law',
     description:
@@ -99,7 +54,7 @@ export const practiceAreas = [
   },
   {
     id: 'debt-recovery',
-    number: '11',
+    number: '06',
     Icon: DocumentTextIcon,
     title: 'Debt Recovery & Enforcement',
     description:
@@ -107,7 +62,7 @@ export const practiceAreas = [
   },
   {
     id: 'adr',
-    number: '12',
+    number: '07',
     Icon: ScalesIcon,
     title: 'Alternative Dispute Resolution',
     description:
@@ -115,7 +70,7 @@ export const practiceAreas = [
   },
   {
     id: 'legislative-drafting',
-    number: '13',
+    number: '08',
     Icon: PenIcon,
     title: 'Legislative Drafting & Policy Development',
     description:
@@ -123,7 +78,7 @@ export const practiceAreas = [
   },
   {
     id: 'corporate-services',
-    number: '14',
+    number: '09',
     Icon: BuildingIcon,
     title: 'Regulatory & Corporate Services',
     description:
@@ -131,7 +86,7 @@ export const practiceAreas = [
   },
   {
     id: 'civil-criminal',
-    number: '15',
+    number: '10',
     Icon: BookOpenIcon,
     title: 'Other Civil & Criminal Causes',
     description:

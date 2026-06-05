@@ -24,7 +24,7 @@ export const siteConfig = {
   stats: [
     { number: '2018', label: 'Year Founded' },
     { number: '500+', label: 'Cases Handled' },
-    { number: '14+', label: 'Practice Areas' },
+    { number: '10+', label: 'Practice Areas' },
     { number: '9',   label: 'Team Members' },
   ],
 
