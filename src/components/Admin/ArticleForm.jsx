@@ -18,6 +18,10 @@ const CATEGORIES = [
   'Alternative Dispute Resolution',
 ];
 
+function wordCount(text) {
+  return text.trim() ? text.trim().split(/\s+/).length : 0;
+}
+
 function toSlug(title) {
   return title
     .toLowerCase()
@@ -284,10 +288,9 @@ export default function ArticleForm() {
                 value={form.excerpt}
                 onChange={handleChange}
                 placeholder="A 1–2 sentence summary of the article shown on the publications card."
-                maxLength={350}
                 required
               />
-              <span className={styles.charCount}>{form.excerpt.length} / 350</span>
+              <span className={styles.charCount}>{form.excerpt.length} characters</span>
             </div>
 
             {/* Body */}
@@ -305,6 +308,7 @@ Separate each paragraph with a blank line — each one becomes its own paragraph
 You can write as many paragraphs as needed."
                 required
               />
+              <span className={styles.charCount}>{wordCount(form.body)} words</span>
               <span className={styles.formHint}>Separate paragraphs with a blank line (press Enter twice).</span>
             </div>
           </div>
