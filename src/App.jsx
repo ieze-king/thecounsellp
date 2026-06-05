@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from './components/shared/Layout';
 import Hero from './components/Hero';
@@ -8,8 +8,12 @@ import About from './components/About';
 import PracticeAreas from './components/PracticeAreas';
 import Team from './components/Team';
 import Contact from './components/Contact';
-import TeamProfile from './components/TeamProfile';
-import NotFound from './components/NotFound';
+import Publications from './components/Publications';
+
+const TeamProfile       = lazy(() => import('./components/TeamProfile'));
+const PublicationsList  = lazy(() => import('./components/Publications/PublicationsList'));
+const PublicationDetail = lazy(() => import('./components/PublicationDetail'));
+const NotFound          = lazy(() => import('./components/NotFound'));
 
 function HomeContent() {
   const { hash } = useLocation();
@@ -33,6 +37,7 @@ function HomeContent() {
       <About />
       <PracticeAreas />
       <Team />
+      <Publications />
       <Contact />
     </>
   );
@@ -41,11 +46,15 @@ function HomeContent() {
 export default function App() {
   return (
     <Layout>
-      <Routes>
-        <Route path="/" element={<HomeContent />} />
-        <Route path="/team/:slug" element={<TeamProfile />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<HomeContent />} />
+          <Route path="/team/:slug" element={<TeamProfile />} />
+          <Route path="/publications" element={<PublicationsList />} />
+          <Route path="/publications/:slug" element={<PublicationDetail />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </Layout>
   );
 }

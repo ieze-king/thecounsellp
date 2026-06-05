@@ -10,8 +10,8 @@ service cloud.firestore {
 
     // Newsletter subscribers — public write, no client reads
     match /subscribers/{docId} {
-      allow create: if isValidSubscriber(request.resource.data);
-      allow read, update, delete: if false;
+      allow create, update: if isValidSubscriber(request.resource.data);
+      allow read, delete: if false;
     }
 
     // Deny everything else by default

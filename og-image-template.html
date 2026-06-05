@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OG Image Template — 1200 × 630</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #0a1628;
+      font-family: 'Playfair Display', Georgia, serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: 1200px;
+      height: 630px;
+      background: #0a1628;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0;
+      overflow: hidden;
+    }
+
+    /* Decorative corner borders */
+    .card::before,
+    .card::after {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-color: rgba(201,168,76,0.4);
+      border-style: solid;
+    }
+    .card::before {
+      top: 40px;
+      left: 40px;
+      border-width: 1px 0 0 1px;
+    }
+    .card::after {
+      bottom: 40px;
+      right: 40px;
+      border-width: 0 1px 1px 0;
+    }
+
+    /* Subtle pattern dots */
+    .pattern {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(201,168,76,0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    /* Center gold divider line */
+    .divider {
+      position: absolute;
+      left: 80px;
+      right: 80px;
+      bottom: 180px;
+      height: 1px;
+      background: rgba(201,168,76,0.25);
+    }
+
+    .inner {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 80px;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .logo-img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+    }
+
+    .abbr {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: #c9a84c;
+      letter-spacing: 0.05em;
+      line-height: 1;
+    }
+
+    .aka {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.65);
+    }
+
+    .firm-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .tagline {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .url {
+      position: absolute;
+      bottom: 44px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: rgba(201,168,76,0.5);
+      z-index: 2;
+    }
+
+    /* Load brand fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap');
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="pattern"></div>
+    <div class="divider"></div>
+
+    <div class="inner">
+      <div class="logo-row">
+        <img class="logo-img" src="public/favicon.png" alt="TMA Logo" />
+        <div class="logo-text">
+          <span class="abbr">TMA</span>
+          <span class="aka">Ark of God Chambers</span>
+        </div>
+      </div>
+
+      <h1 class="firm-name">The Michaels Attorneys</h1>
+      <p class="tagline">Technology-Driven · Excellence-Focused · Legal Practice</p>
+    </div>
+
+    <div class="url">www.themichaelsattorneys.com</div>
+  </div>
+</body>
+</html>

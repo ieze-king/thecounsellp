@@ -1,0 +1,213 @@
+.section {
+  background: var(--color-cream);
+  padding: var(--section-y) var(--section-x);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ── Intro ── */
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem 5rem;
+  align-items: end;
+  margin-bottom: 4rem;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  color: var(--color-text-mid);
+  line-height: 1.9;
+  font-weight: 300;
+  align-self: end;
+}
+
+/* ── Card Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* ── Card ── */
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border-navy);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.card:hover .cardBar {
+  width: 100%;
+}
+
+.cardCategory {
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  display: inline-block;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  font-weight: 600;
+  color: var(--color-navy);
+  line-height: 1.35;
+}
+
+.cardExcerpt {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text-mid);
+  line-height: 1.8;
+  font-weight: 300;
+  flex: 1;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border-navy);
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.cardAuthor {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.cardDot {
+  color: var(--color-gold);
+  font-size: 0.7rem;
+}
+
+.cardDate {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  color: var(--color-text-mid);
+}
+
+.cardLink {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-gold-dark);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.cardLink:hover {
+  color: var(--color-navy);
+}
+
+.cardBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-gold);
+  transition: width 0.45s ease;
+}
+
+/* ── View All ── */
+.actions {
+  text-align: center;
+}
+
+.viewAll {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  border-bottom: 1px solid var(--color-gold);
+  padding-bottom: 0.2rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.viewAll:hover {
+  color: var(--color-gold-dark);
+  border-color: var(--color-gold-dark);
+}
+
+/* ── Publications listing page ── */
+.pageSection {
+  background: var(--color-cream);
+  padding: calc(var(--nav-height) + 4rem) var(--section-x) var(--section-y);
+  min-height: 60vh;
+}
+
+.pageInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.pageHeader {
+  margin-bottom: 4rem;
+}
+
+.listGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .grid,
+  .listGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid,
+  .listGrid {
+    grid-template-columns: 1fr;
+  }
+}

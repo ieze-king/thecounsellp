@@ -12,11 +12,11 @@ import Slider6 from '../../assets/Slider6.jpeg';
 import styles from './Hero.module.css';
 
 const slides = [Slider0, Slider1, Slider2, Slider3, Slider4, Slider5, Slider6];
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
   const intervalRef = useRef(null);
+  const prefersReducedMotion = useRef(window.matchMedia('(prefers-reduced-motion: reduce)').matches).current;
 
   useEffect(() => {
     if (prefersReducedMotion) return;

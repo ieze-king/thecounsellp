@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import Button from '../shared/Button';
 import { MenuIcon, CloseIcon } from '../shared/Icons';
 import { siteConfig } from '../../data/siteConfig';
@@ -11,6 +11,7 @@ const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Practice Areas', href: '#practice' },
   { label: 'Our Team', href: '#team' },
+  { label: 'Publications', href: '/publications', isRoute: true },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -63,11 +64,17 @@ export default function Navbar() {
           </a>
 
           <ul className={styles.links} role="list">
-            {navLinks.map(({ label, href }) => (
+            {navLinks.map(({ label, href, isRoute }) => (
               <li key={href}>
-                <a href={href} className={styles.link} onClick={(e) => handleNavClick(e, href)}>
-                  {label}
-                </a>
+                {isRoute ? (
+                  <Link to={href} className={styles.link} onClick={() => setIsMenuOpen(false)}>
+                    {label}
+                  </Link>
+                ) : (
+                  <a href={href} className={styles.link} onClick={(e) => handleNavClick(e, href)}>
+                    {label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -93,10 +100,16 @@ export default function Navbar() {
         role="dialog"
         aria-label="Mobile navigation"
       >
-        {navLinks.map(({ label, href }) => (
-          <a key={href} href={href} className={styles.mobileLink} onClick={(e) => handleNavClick(e, href)}>
-            {label}
-          </a>
+        {navLinks.map(({ label, href, isRoute }) => (
+          isRoute ? (
+            <Link key={href} to={href} className={styles.mobileLink} onClick={() => setIsMenuOpen(false)}>
+              {label}
+            </Link>
+          ) : (
+            <a key={href} href={href} className={styles.mobileLink} onClick={(e) => handleNavClick(e, href)}>
+              {label}
+            </a>
+          )
         ))}
         <Button href="#contact" variant="gold" onClick={(e) => handleNavClick(e, '#contact')}>
           Book Appointment

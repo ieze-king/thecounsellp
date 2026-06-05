@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../../firebase';
 import Button from '../shared/Button';
 import styles from './Contact.module.css';
@@ -35,10 +35,12 @@ export default function SubscribeForm() {
     setErrorMsg('');
 
     try {
-      await addDoc(collection(db, 'subscribers'), {
-        ...form,
+      const docId = form.email.toLowerCase().replace('@', '_at_').replace(/\./g, '_dot_');
+      await setDoc(doc(db, 'subscribers', docId), {
+        name: form.name,
+        email: form.email,
         subscribedAt: serverTimestamp(),
-      });
+      }, { merge: true });
     } catch (err) {
       console.error('Subscription error:', err);
       setErrorMsg('Something went wrong. Please try again.');
@@ -60,9 +62,9 @@ export default function SubscribeForm() {
   return (
     <div className={styles.subscribePanel}>
       <span className={styles.mapLabel}>Stay Updated</span>
-      <h3 className={styles.subscribeTitle}>Subscribe to Our Publications</h3>
+      <h3 className={styles.subscribeTitle}>Subscribe to Legal Insights</h3>
       <p className={styles.subscribeText}>
-        Get legal insights, regulatory updates, and firm publications delivered directly to your inbox.
+        Get new articles, regulatory updates, and firm publications from our attorneys delivered directly to your inbox.
       </p>
       <form className={styles.subscribeForm} onSubmit={handleSubmit} noValidate aria-label="Newsletter subscription form">
         <input

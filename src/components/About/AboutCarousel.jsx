@@ -11,11 +11,10 @@ const slides = [
   { src: GroupPicture2, alt: 'The Michaels Attorneys team' },
 ];
 
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
 export default function AboutCarousel() {
   const [current, setCurrent] = useState(0);
   const intervalRef = useRef(null);
+  const reducedMotion = useRef(window.matchMedia('(prefers-reduced-motion: reduce)').matches).current;
 
   function stop() {
     clearInterval(intervalRef.current);

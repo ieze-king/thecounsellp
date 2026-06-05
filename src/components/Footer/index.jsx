@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { LinkedInIcon, TwitterIcon, FacebookIcon, InstagramIcon } from '../shared/Icons';
 import { siteConfig } from '../../data/siteConfig';
 import { practiceAreas } from '../../data/practiceAreas';
@@ -8,7 +9,8 @@ const quickLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About Us', href: '#about' },
   { label: 'Practice Areas', href: '#practice' },
-  { label: 'Our People', href: '#team' },
+  { label: 'Our Team', href: '#team' },
+  { label: 'Publications', href: '/publications' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -40,7 +42,11 @@ export default function Footer() {
             <ul className={styles.linkList}>
               {quickLinks.map(({ label, href }) => (
                 <li key={href}>
-                  <a href={href} className={styles.link}>{label}</a>
+                  {href.startsWith('/') ? (
+                    <Link to={href} className={styles.link}>{label}</Link>
+                  ) : (
+                    <a href={href} className={styles.link}>{label}</a>
+                  )}
                 </li>
               ))}
             </ul>
