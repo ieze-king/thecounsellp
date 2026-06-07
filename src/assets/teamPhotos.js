@@ -6,7 +6,7 @@ import photo5 from './HEAD, RESEARCH & PUBLICATIONS.jpeg';
 import photo6 from './HEAD, LITIGATION.jpeg';
 import photo8 from './EzeIfeanyiKingsley.png';
 import photo9 from './Lois.jpeg';
-import photo10 from './SECRETARY.jpeg';
+import photo10 from './SecretaryNew.jpeg';
 
 export const teamPhotos = {
   1: photo1,
