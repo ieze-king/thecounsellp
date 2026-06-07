@@ -3,9 +3,9 @@ export const siteConfig = {
   firmAbbr: 'TMA',
   firmAka: 'Ark of God Chambers',
 
-  heroLabel: 'Established 2018 · Technology-Driven Legal Solutions',
+  heroLabel: 'Established 2018 · Excellence-Driven Legal Services',
   heroSubtitle:
-    'A technology-driven law firm at the intersection of law, regulation, governance, and innovation, delivering comprehensive legal services across litigation, cybersecurity, data protection, corporate advisory, and regulatory compliance.',
+    'An excellence-driven law firm at the intersection of law, regulation, governance, and innovation, delivering comprehensive legal services across litigation, cybersecurity, data protection, corporate advisory, and regulatory compliance.',
 
   contact: {
     address: 'Plot C4, Ipent VI Legislative Villa\nOpposite Prince Ebeano Supermarket\nOff Ring Road 2, Lokogoma/Gaduwa\nAbuja, Nigeria',
