@@ -15,6 +15,13 @@
     "react-helmet-async": "^3.0.0",
     "react-router-dom": "^6.30.4"
   },
+  "overrides": {
+    "http-cache-semantics": "^4.1.1",
+    "semver-regex": "^4.0.5",
+    "uuid": "^11.1.0",
+    "cross-spawn": "^7.0.6",
+    "got": "^12.6.1"
+  },
   "devDependencies": {
     "@vheemstra/vite-plugin-imagemin": "^2.2.1",
     "@vitejs/plugin-react": "^4.3.0",
