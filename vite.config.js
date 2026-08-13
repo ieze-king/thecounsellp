@@ -1,17 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import viteImagemin from '@vheemstra/vite-plugin-imagemin';
-import imageminMozjpeg from 'imagemin-mozjpeg';
-import imageminPngquant from 'imagemin-pngquant';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
   plugins: [
     react(),
-    viteImagemin({
-      plugins: {
-        jpg: imageminMozjpeg({ quality: 75 }),
-        png: imageminPngquant({ quality: [0.6, 0.8] }),
-      },
+    ViteImageOptimizer({
+      jpg: { quality: 75 },
+      jpeg: { quality: 75 },
+      png: { quality: 80 },
     }),
   ],
   build: {

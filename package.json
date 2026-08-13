@@ -19,14 +19,13 @@
     "http-cache-semantics": "^4.1.1",
     "semver-regex": "^4.0.5",
     "uuid": "^11.1.0",
-    "cross-spawn": "^7.0.6",
-    "got": "^12.6.1"
+    "cross-spawn": "^7.0.6"
   },
   "devDependencies": {
-    "@vheemstra/vite-plugin-imagemin": "^2.2.1",
     "@vitejs/plugin-react": "^4.3.0",
-    "imagemin-mozjpeg": "^10.0.0",
-    "imagemin-pngquant": "^10.0.0",
-    "vite": "^5.4.0"
+    "sharp": "^0.35.3",
+    "svgo": "^4.0.2",
+    "vite": "^5.4.0",
+    "vite-plugin-image-optimizer": "^2.0.3"
   }
 }
