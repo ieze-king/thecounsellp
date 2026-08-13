@@ -13,7 +13,7 @@ export const teamMembers = [
       'Recognized for strong analytical, investigative, and policy development skills, with experience in advising national and international youth-focused organizations on legal and regulatory matters. Committed to leveraging legal expertise and technology-driven solutions to promote justice, compliance, innovation, and institutional accountability.',
     ],
     education: [
-      'LL.M in ICT Law (in progress) — Nile University of Nigeria',
+      'LL.M in ICT Law — Nile University of Nigeria',
       'Diploma in Cybersecurity and Ethical Hacking',
     ],
     specializations: [
@@ -131,8 +131,8 @@ export const teamMembers = [
     slug: 'jemima-oteh',
     initials: 'JO',
     name: 'Jemimah E. Oteh LLM',
-    role: 'Head, Research & Publications',
-    bio: 'Coordinates legal research, policy development, knowledge management, and publications across the Firm.',
+    role: 'Head, Banking & Finance Practice and Research',
+    bio: 'Heads Banking, Finance, Risk Management and Investments practices and coordinates legal research and policy development across the Firm.',
     colorIndex: 1,
     fullBio: [
       'Jemimah Oteh is a dynamic legal professional with over four years of experience spanning legal practice, academic research, law clinic administration, and financial law. Called to the Nigerian Bar and holding an LLM in Financial Law and Policy from Nile University, Abuja, she combines academic grounding with practical expertise across areas of practice. She is an Associate Member of both the Chartered Institute of Arbitrators (UK) and the Institute of Chartered Mediators and Conciliators.',
