@@ -5,8 +5,9 @@ import photo4 from './FAVOUR NGOZI EGWU, ESQ..jpeg';
 import photo5 from './HEAD, RESEARCH & PUBLICATIONS.jpeg';
 import photo6 from './HEAD, LITIGATION.jpeg';
 import photo8 from './EzeIfeanyiKingsley.png';
-import photo9 from './Lois.jpeg';
 import photo10 from './SecretaryNew.jpeg';
+import photo11 from './MARANATHA ISIOMA OKWOR, ESQ. (LL.M).jpeg';
+import photo12 from './BLESSING JOHN, ESQ (LL.M).jpeg';
 
 export const teamPhotos = {
   1: photo1,
@@ -16,6 +17,7 @@ export const teamPhotos = {
   5: photo5,
   6: photo6,
   8: photo8,
-  9: photo9,
   10: photo10,
+  11: photo11,
+  12: photo12,
 };
